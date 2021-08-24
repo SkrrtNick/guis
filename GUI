@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="274.0" prefWidth="270.0" type="GridPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scripts.gui.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="112.0" minHeight="0.0" prefHeight="6.0" valignment="TOP" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="252.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="350.0" GridPane.columnSpan="2147483647">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Join Discord" />
+                  <MenuItem mnemonicParsing="false" text="Forum Thread" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane prefHeight="247.0" prefWidth="270.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" GridPane.rowSpan="2147483647">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="395.0">
+                     <children>
+                        <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loot Items Worth Above" />
+                        <Spinner fx:id="spinValue" editable="true" layoutX="150.0" layoutY="10.0" prefHeight="25.0" prefWidth="54.0" />
+                        <CheckBox fx:id="checkCrash" layoutX="14.0" layoutY="42.0" mnemonicParsing="false" text="Don't crash other players" />
+                        <CheckBox fx:id="checkCannon" layoutX="14.0" layoutY="76.0" mnemonicParsing="false" text="Use a cannon" />
+                        <CheckBox fx:id="checkWebhooks" layoutX="13.0" layoutY="105.0" mnemonicParsing="false" text="Anonymise Webhooks" />
+                        <ComboBox fx:id="comboTeleport" layoutX="64.0" layoutY="124.0" prefHeight="25.0" prefWidth="108.0" />
+                        <Text layoutX="10.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teleport" />
+                        <CheckBox fx:id="checkDharoks" layoutX="12.0" layoutY="157.0" mnemonicParsing="false" text="Repair Dharok's Gear" />
+                        <ComboBox fx:id="comboSpec" layoutX="93.0" layoutY="180.0" prefHeight="25.0" prefWidth="112.0" />
+                        <Text layoutX="10.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spec Weapon" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Prayer">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <CheckBox fx:id="checkDisablePrayer" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Disable prayer when Mole has burrowed" />
+                        <CheckBox fx:id="checkProtectMelee" layoutX="14.0" layoutY="39.0" mnemonicParsing="false" text="Protect from Melee" />
+                        <CheckBox fx:id="checkPiety" layoutX="14.0" layoutY="63.0" mnemonicParsing="false" text="Flick Piety" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Inventory">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stamina Potions" />
+                        <Text layoutX="14.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prayer Potions" />
+                        <ComboBox id="comboRanged" fx:id="comboRanged" layoutX="14.0" layoutY="62.0" prefHeight="25.0" prefWidth="96.0" />
+                        <ComboBox id="comboCombat" fx:id="comboCombat" layoutX="14.0" layoutY="91.0" prefHeight="25.0" prefWidth="96.0" />
+                        <Spinner fx:id="spinStam" layoutX="123.0" layoutY="10.0" prefHeight="25.0" prefWidth="50.0" />
+                        <Spinner fx:id="spinPrayer" layoutX="123.0" layoutY="35.0" prefHeight="25.0" prefWidth="50.0" />
+                        <Spinner fx:id="spinRange" layoutX="123.0" layoutY="62.0" prefHeight="25.0" prefWidth="50.0" />
+                        <Spinner fx:id="spinCombat" layoutX="123.0" layoutY="91.0" prefHeight="25.0" prefWidth="50.0" />
+                        <CheckBox fx:id="checkFood" layoutX="16.0" layoutY="125.0" mnemonicParsing="false" text="Bring food" />
+                        <ComboBox fx:id="comboFood" layoutX="14.0" layoutY="149.0" prefHeight="25.0" prefWidth="96.0" />
+                        <Spinner fx:id="spinFood" layoutX="123.0" layoutY="149.0" prefHeight="25.0" prefWidth="50.0" />
+                        <CheckBox fx:id="checkRockCake" layoutX="15.0" layoutY="185.0" mnemonicParsing="false" text="Use rockcake " />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</fx:root>
